@@ -25,7 +25,7 @@ document.getElementById("snap").addEventListener("click", function() {
   const displaySize = { width: video.width, height: video.height };
   faceapi.matchDimensions(canvas, displaySize);
   setInterval(async () => {
-    const detections = await faceapi.detectAllFaces(context, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
+    const detections = await faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
   },100)
   //let fullFaceDescriptions =  faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors();
