@@ -24,13 +24,10 @@ document.getElementById("snap").addEventListener("click", function() {
   console.log("trying new concept");
   const displaySize = { width: canvas.width, height: canvas.height };
   faceapi.matchDimensions(canvas, displaySize);
-  setInterval(async () => {
-    const detections = await faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
-    const resizedDetections = faceapi.resizeResults(detections, displaySize);
-    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-    faceapi.draw.drawDetections(canvas, resizedDetections);
-  },100)
-  //let fullFaceDescriptions =  faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors();
+  const detections =  faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
+  const resizedDetections = faceapi.resizeResults(detections, displaySize);
+  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  faceapi.draw.drawDetections(canvas, resizedDetections);
 });
 
 
