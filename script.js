@@ -18,7 +18,6 @@ function startVideo() {
 }
 
 
-
 document.getElementById("snap").addEventListener("click", function() {
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
@@ -27,6 +26,8 @@ document.getElementById("snap").addEventListener("click", function() {
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+    faceapi.draw.drawDetections(canvas, resizedDetections);
   },100)
   //let fullFaceDescriptions =  faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors();
 });
