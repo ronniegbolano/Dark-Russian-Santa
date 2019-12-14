@@ -22,7 +22,7 @@ function startVideo() {
 document.getElementById("snap").addEventListener("click", function() {
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
-  let fullFaceDescriptions = await faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors()
+  //let fullFaceDescriptions =  faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors();
 });
 
 
