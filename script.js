@@ -22,7 +22,7 @@ function startVideo() {
 document.getElementById("snap").addEventListener("click", function() {
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
-  const displaySize = { width: video.width, height: video.height };
+  const displaySize = { width: canvas.width, height: canvas.height };
   faceapi.matchDimensions(canvas, displaySize);
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
