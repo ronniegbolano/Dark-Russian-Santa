@@ -1,4 +1,6 @@
 const video = document.getElementById('video')
+var context = canvas.getContext("2d");
+
 
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -15,6 +17,16 @@ function startVideo() {
   )
 }
 
+
+
+document.getElementById("snap").addEventListener("click", function() {
+  context.drawImage(video, 0, 0, 400, 300);
+  console.log("trying new concept");
+  let fullFaceDescriptions = await faceapi.detectAllFaces(context).withFaceLandmarks().withFaceDescriptors()
+});
+
+
+/*
 video.addEventListener('play', () => {
   const canvas = faceapi.createCanvasFromMedia(video)
   document.body.append(canvas)
@@ -25,7 +37,6 @@ video.addEventListener('play', () => {
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
     faceapi.draw.drawDetections(canvas, resizedDetections)
-    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
   }, 100)
-})
+})*/
