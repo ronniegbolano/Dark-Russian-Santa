@@ -19,15 +19,13 @@ function startVideo() {
 }
 
 
-document.getElementById("snap").addEventListener("click", function() {
+document.getElementById("snap").addEventListener("click", async () => {
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
-  const displaySize = { width: canvas.width, height: canvas.height };
-  faceapi.matchDimensions(canvas, displaySize);
-  const detections =  faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
-  const resizedDetections = faceapi.resizeResults(detections, displaySize);
-  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-  faceapi.draw.drawDetections(canvas, resizedDetections);
+  const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
+  console.log("detections" + detection);
+
+
 });
 
 
