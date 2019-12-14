@@ -22,7 +22,7 @@ document.getElementById("snap").addEventListener("click", async () => {
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
   const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
-  console.log("detections" + detection);
+  console.log("detections" + detections);
 
 
 });
