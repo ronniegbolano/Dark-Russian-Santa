@@ -1,3 +1,4 @@
+var canvas = document.getElementById("canvas");
 const video = document.getElementById('video')
 var context = canvas.getContext("2d");
 
