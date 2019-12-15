@@ -1,6 +1,8 @@
 var canvas = document.getElementById("canvas");
 const video = document.getElementById('video')
 var context = canvas.getContext("2d");
+var rectangleCanvas = document.getElementById("rectangleCanvas");
+var ctx = rectangleCanvas.getContext("2d");
 
 
 
@@ -26,7 +28,6 @@ document.getElementById("snap").addEventListener("click", async () => {
 
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
-  //container.append();
   displaySize = {width:canvas.width, height:canvas.height};
   const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
   console.log("detections" + detections.length);
@@ -38,14 +39,19 @@ document.getElementById("snap").addEventListener("click", async () => {
     console.log(drawBox);
   });
 
-  var x = detections[0].detection.box.x;
-  var y =  detections[0].detection.box.y;
-  var width =  detections[0].detection.width;
-  var height = detections[0].detection.height;
+  if(detections[0]){
+    var x = detections[0].detection.box.x;
+    var y =  detections[0].detection.box.y;
+    var width =  detections[0].detection.width;
+    var height = detections[0].detection.height;
+    ctx.beginPath();
+    ctx.rect(x, y, width, height);
+    ctx.stroke();
+  }else{
+    //write some error your face could not be recognized
+    console.log("your face isn't being recognized!")
 
-  context.beginPath();
-  context.rect(x, y, width, height);
-  context.stroke();
+  }
  
 });
 
