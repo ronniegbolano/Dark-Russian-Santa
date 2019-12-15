@@ -42,9 +42,10 @@ document.getElementById("snap").addEventListener("click", async () => {
   if(detections[0]){
     var x = detections[0].detection.box.x;
     var y =  detections[0].detection.box.y;
-    var width =  detections[0].detection.width;
-    var height = detections[0].detection.height;
+    var width =  detections[0].detection.box.width;
+    var height = detections[0].detection.box.height;
     ctx.beginPath();
+    ctx.strokeStyle = "black";
     ctx.rect(x, y, width, height);
     ctx.stroke();
   }else{
