@@ -19,11 +19,22 @@ function startVideo() {
 
 
 document.getElementById("snap").addEventListener("click", async () => {
+  const container = document.createElement('div');
+  container.style.position = 'relative';
+
   context.drawImage(video, 0, 0, 400, 300);
   console.log("trying new concept");
+  //container.append();
+  displaySize = {width:canvas.width, height:canvas.height};
+
   const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
   console.log("detections" + detections.length);
-
+  const resizedDetections = faceapi.resizeResults(detections,displaySize);
+  resizedDetections.forEach(detections  => {
+    const box = detections.detection.box;
+    const drawBox = new faceapi.draw.DrawBox(box, { label: "face" });
+    drawBox.draw(canvas);
+  });
 
 });
 
