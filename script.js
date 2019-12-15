@@ -3,6 +3,8 @@ const video = document.getElementById('video')
 var context = canvas.getContext("2d");
 
 
+
+
 Promise.all([
   faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
@@ -26,18 +28,25 @@ document.getElementById("snap").addEventListener("click", async () => {
   console.log("trying new concept");
   //container.append();
   displaySize = {width:canvas.width, height:canvas.height};
-
   const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
   console.log("detections" + detections.length);
   const resizedDetections = faceapi.resizeResults(detections,displaySize);
   resizedDetections.forEach(detections  => {
-    console.log("inside for loop");
     const box = detections.detection.box;
     const drawBox = new faceapi.draw.DrawBox(box, { label: "face" });
     drawBox.draw(canvas);
+    console.log(drawBox);
   });
-  console.log("common work dammit");
 
+  var x = detections[0].detection.box.x;
+  var y =  detections[0].detection.box.y;
+  var width =  detections[0].detection.width;
+  var height = detections[0].detection.height;
+
+  context.beginPath();
+  context.rect(x, y, width, height);
+  context.stroke();
+ 
 });
 
 
