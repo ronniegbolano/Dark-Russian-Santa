@@ -50,6 +50,10 @@ document.getElementById("snap").addEventListener("click", async () => {
       context.drawImage(imageObj, x, y, width, height);
     };
     imageObj.src = '/assets/faceRecognitionImage.jpg';
+
+    var img = document.createElement("img");
+    img.src = '/assets/faceRecognitionImage.jpg';
+    document.body.append(img);
     /*
     ctx.beginPath();
     ctx.strokeStyle = "black";
