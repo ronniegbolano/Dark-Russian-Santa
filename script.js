@@ -44,10 +44,21 @@ document.getElementById("snap").addEventListener("click", async () => {
     var y =  detections[0].detection.box.y;
     var width =  detections[0].detection.box.width;
     var height = detections[0].detection.box.height;
+        
+    var imageObj = new Image();
+    imageObj.onload = function() {
+      context.drawImage(imageObj, x, y, width, height);
+    };
+    imageObj.src = '/assets/faceRecognitionImage.jpg';
+    /*
     ctx.beginPath();
     ctx.strokeStyle = "black";
     ctx.rect(x, y, width, height);
     ctx.stroke();
+    */
+
+
+
   }else{
     //write some error your face could not be recognized
     console.log("your face isn't being recognized!")
