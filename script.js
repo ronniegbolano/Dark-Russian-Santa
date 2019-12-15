@@ -31,10 +31,12 @@ document.getElementById("snap").addEventListener("click", async () => {
   console.log("detections" + detections.length);
   const resizedDetections = faceapi.resizeResults(detections,displaySize);
   resizedDetections.forEach(detections  => {
+    console.log("inside for loop");
     const box = detections.detection.box;
     const drawBox = new faceapi.draw.DrawBox(box, { label: "face" });
     drawBox.draw(canvas);
   });
+  console.log("common work dammit");
 
 });
 
