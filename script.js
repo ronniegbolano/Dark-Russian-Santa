@@ -44,13 +44,23 @@ document.getElementById("snap").addEventListener("click", async () => {
     var y =  detections[0].detection.box.y;
     var width =  detections[0].detection.box.width;
     var height = detections[0].detection.box.height;
-        
+
+
+    //save canvas as an image    
+    //draw image based on previous image
+
+    var img = new Image();
+    img.src = canvas.toDataURL();
+    document.body.appendChild(img);
+
+
+    /*
     var imageObj = new Image();
     imageObj.onload = function() {
-      context.drawImage(imageObj, x, y, width, height);
+      context.drawImage(ctx,x,y,width,sheight,x,y,width,height);
     };
     imageObj.src = '/assets/faceRecognitionImage.jpg';
-    document.body.append(imageObj);
+    document.body.append(imageObj);*/
     /*
     ctx.beginPath();
     ctx.strokeStyle = "black";
