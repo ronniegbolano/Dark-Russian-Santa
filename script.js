@@ -56,10 +56,10 @@ document.getElementById("snap").addEventListener("click", async () => {
         110,
         135
     );
+    var d = ctx.toDataURL("/assets/faceRecognitionImage.png");
   }else{
     //write some error your face could not be recognized
-    console.log("your face isn't being recognized!")
-
+    console.log("your face isn't being recognized!");
   }
  
 });
