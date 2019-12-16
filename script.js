@@ -56,8 +56,8 @@ document.getElementById("snap").addEventListener("click", async () => {
         height,
         0,
         0,
-        100,
-        150
+        110,
+        135
     );
   }else{
     //write some error your face could not be recognized
