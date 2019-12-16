@@ -56,11 +56,19 @@ document.getElementById("snap").addEventListener("click", async () => {
         height,
         0,
         0,
-        400,
-        300
+        150,
+        100
     );
 
-    var data_url = ctx.toDataURL("/assets/faceRecognitionImage.jpg");
+      var data_url = hidden_canv.toDataURL("image/png");
+
+
+
+
+
+    var img = new Image();
+    img.src = canvas.toDataURL();
+    document.body.appendChild(img);
 
 
     /*
