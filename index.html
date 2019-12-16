@@ -7,21 +7,84 @@
   <title>Document</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Berkshire+Swash|Crafty+Girls|Delius|Lakki+Reddy|Princess+Sofia|Redressed|Ruge+Boogie|Sacramento|Schoolbell|Tillana&display=swap" rel="stylesheet">  <!-- Load plugins for JQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
 </head>
 <body>
+  <div id="main" class="container">
+    <div id="header">
+      <h1 class="text-center heading__inbox">
+        Santa's Costume Booth
+      </h1>
+      <nav id="nav__color" class="nav nav-pills nav-fill menu">
+        <a class="nav-item nav-link" href="intro.html">Intro</a>
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="booth.html">Costume Booth</a>
+        <a class="nav-item nav-link" href="team.html">Our Team</a>
+        <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+    <div id="description" class="jumbotron py-4 my-4 text-center">
+      <h1 class="display-4">Greetings Human!</h1>
+      <p class="display-6 lead py-2">We officially welcome you to Santa's Costume Booth. We are here to give you the opportunity to crush your dress-up game for this Halloween and Christmas. We didn't want to decide what our favorite holiday was. Neither should you.</p>
+      <hr class="my-4">
+    </div>
+    <div id="howto" class="jumbotron py-4 my-4 text-center">
+      <h1 class="display-5">How it works!</h1>
+      <p class="display-6 lead py-2">Initally, we will ask to access your webcam. Then, you will take a picture of yourself. We will use our facial recognition api call to crop out your face from the picture. Then, we will put you in our costume booth where you can randomize your outfits and drag and drop when necessary.  </p>
+      <hr class="my-3">
+      <p>Are you ready for the experience?</p>
+      <a id="btn" class="btn btn-light btn-lg" href="#" role="button">Let's do it!</a>
+    </div>
+    <div id="image" class="jumbotron py-4 my-4 text-center">
+      <h1 class="display-5">Let's take your photo!</h1>
+      <p class="display-6 lead py-2"></p>
+<!--       <hr class="my-3"> -->
+      <p></p>
+      <a id="next" class="btn btn-light btn-lg" href="#" role="button">Next</a>
+    </div>
+    
+    <!-- Reference for dev purposes only: https://jqueryui.com/droppable/ - Hijol G  --> -      
+    </div>
+
+  
   <div class = "video-area">
     <video id="video" width="400" height="300" autoplay muted></video>
     <button id = "snap">
         Snap!
     </button>
-</div>
-
+  </div>
   <br/>
   <br/>
   <br/>
-<div class = "camera-area">
-  <canvas id = "canvas" width= "400" height= "300"></canvas>
-  <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
-</div>
+  <div class = "camera-area">
+    <canvas id = "canvas" width= "400" height= "300"></canvas>
+    <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
+  </div>
 </body>
+
+<footer class="bg-image text-center">
+  <div class="content-wrap">
+    <p>
+      Reach out to us!
+    </p>
+    <div class="contact-info">
+      <div>
+          <a href="mailto:raima.hossain.229@my.csun.edu"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/raima-hossain-se/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100008884185149" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+      <p>Copyright 2019 | Santa's Costume Booth</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </html>
