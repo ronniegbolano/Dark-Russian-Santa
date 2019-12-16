@@ -59,34 +59,6 @@ document.getElementById("snap").addEventListener("click", async () => {
         100,
         150
     );
-
-      var data_url = hidden_canv.toDataURL("image/png");
-
-
-
-
-
-    var img = new Image();
-    img.src = canvas.toDataURL();
-    document.body.appendChild(img);
-
-
-    /*
-    var imageObj = new Image();
-    imageObj.onload = function() {
-      context.drawImage(ctx,x,y,width,sheight,x,y,width,height);
-    };
-    imageObj.src = '/assets/faceRecognitionImage.jpg';
-    document.body.append(imageObj);*/
-    /*
-    ctx.beginPath();
-    ctx.strokeStyle = "black";
-    ctx.rect(x, y, width, height);
-    ctx.stroke();
-    */
-
-
-
   }else{
     //write some error your face could not be recognized
     console.log("your face isn't being recognized!")
