@@ -48,10 +48,19 @@ document.getElementById("snap").addEventListener("click", async () => {
 
     //save canvas as an image    
     //draw image based on previous image
+    ctx.drawImage(
+        canvas,
+        x,
+        y,
+        width,
+        height,
+        0,
+        0,
+        400,
+        300
+    );
 
-    var img = new Image();
-    img.src = canvas.toDataURL();
-    document.body.appendChild(img);
+    var data_url = ctx.toDataURL("/assets/faceRecognitionImage.jpg");
 
 
     /*
