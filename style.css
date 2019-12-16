@@ -1,0 +1,287 @@
+html
+{ height: 100%;}
+
+*
+{ margin: 0;
+  padding: 0;}
+
+body
+{ font: normal .80em 'trebuchet ms', arial, sans-serif;
+  background: #F0EFE2 url(https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F1201949-spooky-halloween-backgrounds-1920x1200-ipad-pro.jpg?v=1575855113193) repeat;
+  top right: no-repeat; 
+  background-attachment:fixed;
+  color: #FFF;}
+
+
+p
+{ padding: 0 0 20px 0;
+  line-height: 1.7em;
+   color: white;
+}
+
+img
+{ border: 0;}
+
+h1, h2, h3, h4, h5, h6 
+{ font: normal 175% 'century gothic', arial, sans-serif;
+  color: #FFF;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;}
+
+h2
+{ font: normal 175% 'century gothic', arial, sans-serif;
+  color: #FFF;}
+
+h4, h5, h6
+{ margin: 0;
+  padding: 0 0 5px 0;
+  font: normal 120% arial, sans-serif;
+  color: #FFF;}
+
+h5, h6
+{ font: italic 95% arial, sans-serif;
+  padding: 0 0 15px 0;
+  color: #FFF;}
+
+h6
+{ color: #362C20;}
+
+a, a:hover
+{ outline: none;
+  text-decoration: underline;
+  color: #FFF;}
+
+a:hover
+{ text-decoration: none;}
+
+.left
+{ float: left;
+  width: auto;
+  margin-right: 10px;}
+
+.right
+{ float: right; 
+  width: auto;
+  margin-left: 10px;}
+
+.center
+{ display: block;
+  text-align: center;
+  margin: 20px auto;}
+
+ul
+{ margin: 2px 0 22px 17px;}
+
+ul li
+{ list-style-type: circle;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 5px;}
+
+ol
+{ margin: 8px 0 22px 20px;}
+
+ol li
+{ margin: 0 0 11px 0;}
+
+#menubar
+{ 
+  vertical-align: top;
+  width: 900px;
+  height: 72px;
+  padding: 0;
+  background: transparent url(transparent_light.png) repeat;} 
+
+ul#menu, ul#menu li{ 
+  float: left;
+  margin: 0; 
+  padding: 0;
+}
+
+ul#menu li
+{ list-style: none;}
+
+ul#menu li a 
+{ letter-spacing: 0.1em;
+  font: normal 100% arial, sans-serif;
+  display: block; 
+  float: left; 
+  height: 37px;
+  padding: 29px 26px 6px 26px;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;} 
+
+
+#footer
+{ width: 898px;
+  font: normal 100% 'lucida sans unicode', arial, sans-serif;
+  height: 33px;
+  padding: 24px 0 5px 0;
+  text-align: center; 
+  background: transparent url(transparent_light.png) repeat;
+  color: #FFF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;}
+
+#footer a
+{ color: #FFF;
+  text-decoration: none;}
+
+#footer a:hover
+{ color: #FFF;
+  text-decoration: underline;}
+
+.designer {
+  
+  float: left;
+  width: 150px;
+  height: 300px;
+  padding: 10px;
+  margin: 3em;
+  border: 1px solid #aaaaaa;
+}
+.designer2 {
+  float: left;
+  width: 150px;
+  height: 300px;
+  padding: 10px;
+  margin: 3em;
+  border: 1px solid #aaaaaa;
+}
+.testdrag
+{
+  float: left;
+}
+img.costume1 
+{
+  position: absolute;
+  
+}
+img.costume2
+{
+  position: absolute;
+  
+}
+img.costume3 
+{
+  position: absolute;
+  
+}
+img.figure 
+{
+  position: absolute;
+  
+}
+#draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+.insidebooth {
+  
+  cursor: move;
+}
+
+#screen {
+  overflow: hidden;
+  width: 200px;
+  height: 510px;
+  clear: both;
+  border: 1px solid black;
+}
+
+
+
+
+/* new css for all the pages, all elements below are used in the pages so modify carefully */
+
+#nav__color, .nav-item {
+  color: #ff9b13;
+}
+
+#nav__color, .nav-item:hover {
+  color: #AA3E98;
+}
+
+.heading__inbox {
+  font-size: 60px;
+  font-family: 'Berkshire Swash', cursive;
+  margin-top: 25px;
+}
+
+.menu {
+  font-style: white;
+  margin-top: 30px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+}
+
+#description {
+  background: linear-gradient(0deg, rgba(26,30,36,1) 0%, rgba(223,163,82,1) 100%);
+  opacity: .8;
+}
+
+#description, 
+.display-4{
+  color: white;
+  font-family: 'Tillana', cursive;
+}
+
+#description, 
+.lead{
+  color: white;
+  font-family: 'Delius', cursive;
+  font-size: 30px;
+}
+
+/* #description, .btn-lg {
+  color: green;
+} */
+
+#howto, 
+.display-5{
+  color: white;
+  font-family: 'Delius', cursive;
+}
+
+
+#howto {
+  background: linear-gradient(180deg, rgba(26,30,36,1) 0%, rgba(26,30,36,1) 100%);
+  opacity: .9;
+}
+
+#btn {
+  border: none;
+  background: #DFA352;
+}
+
+/* #btn, .btn:hover {
+  background: #AA3E98;
+} */
+
+#image {
+  background: linear-gradient(180deg, rgba(26,30,36,1) 0%, rgba(223,163,82,1) 100%);
+  opacity: .9;
+}
+
+#next {
+  border: none;
+  color: #DFA352;
+  background: linear-gradient(0deg, rgba(26,30,36,1) 0%, rgba(110,119,131,1) 100%);
+} 
+
+#submit {
+  border: none;
+  background: #DFA352;
+  align: center;
+}
+
+.contact-info a{
+  padding: 10px; 
+  display: inline-block;
+} 
+
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto; 
+  padding: 50px;
+}

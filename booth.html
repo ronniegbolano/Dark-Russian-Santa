@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="sripts.js"></script>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Berkshire+Swash|Delius|Lakki+Reddy|Princess+Sofia|Redressed|Ruge+Boogie|Sacramento|Schoolbell&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <title>Santa Claus is Coming to Town!</title>
+</head>
+
+<body>
+  
+  <div id="main" class="container">
+    <div id="header">
+      <h1 class="text-center heading__inbox">
+        Santa's Costume Booth
+      </h1>
+      
+      
+      <nav class="nav nav-pills nav-fill menu">
+        <a class="nav-item nav-link" href="intro.html">Intro</a>
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="booth.html">Costume Booth</a>
+        <a class="nav-item nav-link" href="team.html">Our Team</a>
+        <a class="nav-item nav-link" href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+                  <div class="designer" ondrop="drop(event)" ondragover="allowDrop(event)"> <img id="costume1" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacket500ManJack5.png?v=1575948212201" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume2" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacketwoman450womanjack4.png?v=1575948192958" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume3" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2FSantaHat3black20stripe.png?v=1575948243890" draggable="true" ondragstart="drag(event)" width="100" height="auto"> </div>
+
+    
+            <div class="designer2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+  <div id="screen">
+    <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" />
+  </div>
+
+      
+</div>
+    
+    <script>
+      
+      
+      
+     $( "#testdrag" ).draggable();
+
+    $( ".designer" ).draggable();
+  
+ 
+    $( ".designer2" ).droppable({
+      
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( ".designer2" )
+            .html( "You just added the santa hat!" );
+      }
+    });
+
+  
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+    
+    <div id="site_content">
+      <div class="sidebar"></div>
+      <div id="content">
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

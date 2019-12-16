@@ -25,9 +25,7 @@ function startVideo() {
 document.getElementById("snap").addEventListener("click", async () => {
   const container = document.createElement('div');
   container.style.position = 'relative';
-
   context.drawImage(video, 0, 0, 400, 300);
-  console.log("trying new concept");
   displaySize = {width:canvas.width, height:canvas.height};
   const detections = await faceapi.detectAllFaces(canvas).withFaceLandmarks().withFaceDescriptors();
   console.log("detections" + detections.length);
@@ -36,7 +34,6 @@ document.getElementById("snap").addEventListener("click", async () => {
     const box = detections.detection.box;
     const drawBox = new faceapi.draw.DrawBox(box, { label: "face" });
     drawBox.draw(canvas);
-    console.log(drawBox);
   });
 
   if(detections[0]){
