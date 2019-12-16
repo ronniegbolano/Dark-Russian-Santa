@@ -56,8 +56,8 @@ document.getElementById("snap").addEventListener("click", async () => {
         height,
         0,
         0,
-        150,
-        100
+        100,
+        150
     );
 
       var data_url = hidden_canv.toDataURL("image/png");
