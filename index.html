@@ -47,26 +47,23 @@
       <p class="display-6 lead py-2"></p>
 <!--       <hr class="my-3"> -->
       <p></p>
-      <a id="next" class="btn btn-light btn-lg" href="#" role="button">Next</a>
+      <div class = "video-area">
+        <video id="video" width="400" height="300" autoplay muted></video>
+        <button id = "snap" class="btn btn-light btn-lg">
+            Snap!
+        </button>
+        <br/>
+        <br/>
+        <br/>
+        <div class = "camera-area">
+          <canvas id = "canvas" width= "400" height= "300"></canvas>
+          <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
+        </div>
+      </div>
     </div>
     
     <!-- Reference for dev purposes only: https://jqueryui.com/droppable/ - Hijol G  --> -      
     </div>
-
-  
-  <div class = "video-area">
-    <video id="video" width="400" height="300" autoplay muted></video>
-    <button id = "snap">
-        Snap!
-    </button>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <div class = "camera-area">
-    <canvas id = "canvas" width= "400" height= "300"></canvas>
-    <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
-  </div>
 </body>
 
 <footer class="bg-image text-center">
