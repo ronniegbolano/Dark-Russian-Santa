@@ -272,7 +272,7 @@ img.figure
 #submit {
   border: none;
   background: #DFA352;
-  align: center;
+  text-align: center;
 }
 
 .contact-info a{
@@ -296,4 +296,72 @@ img.figure
 
 .button-area{
   margin: 0 auto;
+}
+
+.designer {
+  float: left;
+  width: 150px;
+  height: 726px;
+  padding: 10px;
+/*   margin: 3em; */
+
+  margin-left: auto;
+  margin-right: auto;
+   z-index: 4;
+}
+.designer2 {
+  float: right;
+/*   top: 0; */
+  width: 150px;
+  height: 726px;
+  padding: 10px;
+/*   margin: 3em; */
+
+}
+.designer3 {
+
+  margin-left: auto;
+  margin-right: auto;
+/*   margin-top: auto; */
+  width: 600px;
+  height: 88px;
+  padding: 10px;
+
+}
+.designer4 {
+
+  margin-left: auto;
+  margin-right: auto;
+/*   margin-top: auto; */
+  margin-bottom: 0;
+  width: 600px;
+  height: 88px;
+  padding: 10px;
+
+}
+#droppable2 {
+  background-image: url("https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133");
+  background-size: 180px 500px;
+  width: 300px;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#droppable2 img {
+  width: 60px;
+  height: auto;
+  /*    display: inline-block; */
+  display: block;
+  margin: auto;
+
+  margin-top: 42px;
+}
+
+.divdrag {
+    position: relative;
+
 }
