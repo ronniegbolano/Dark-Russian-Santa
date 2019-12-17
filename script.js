@@ -63,8 +63,6 @@ document.getElementById("snap").addEventListener("click", async () => {
     //resizing image code
     var image = document.createElement("img");
     //resize image
-    image.height = 70;
-    image.width  = 56;
     image.src = imgSrc;
     document.body.appendChild(image);
   }else{
