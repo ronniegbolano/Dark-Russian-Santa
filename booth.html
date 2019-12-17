@@ -32,16 +32,41 @@
         <a class="nav-item nav-link" href="contact.html">Contact Us</a>
       </nav>
     </div>
-                  <div class="designer" ondrop="drop(event)" ondragover="allowDrop(event)"> <img id="costume1" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacket500ManJack5.png?v=1575948212201" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume2" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacketwoman450womanjack4.png?v=1575948192958" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume3" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2FSantaHat3black20stripe.png?v=1575948243890" draggable="true" ondragstart="drag(event)" width="100" height="auto"> </div>
+    <div id="image" class="jumbotron py-4 my-4 text-center">
+        <h1 class="display-5">Let's take your photo!</h1>
+        <p class="display-6 lead py-2"></p>
+  <!--       <hr class="my-3"> -->
+        <p></p>
+        <div class = "video-area">
+          <video id="video" width="400" height="300" autoplay muted></video>
+        </div>
+        <div class = "button-area">
+          <button id = "snap" class="btn btn-light btn-lg">
+            Snap!
+          </button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class = "camera-area">
+          <canvas id = "canvas" width= "400" height= "300"></canvas>
+        </div>
+        <div class = "camera-area">
+          <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
+        </div>
+      </div>
+      <!-- Reference for dev purposes only: https://jqueryui.com/droppable/ - Hijol G  --> -      
+    </div>
+
+
+    <div class="designer" ondrop="drop(event)" ondragover="allowDrop(event)"> <img id="costume1" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacket500ManJack5.png?v=1575948212201" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume2" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacketwoman450womanjack4.png?v=1575948192958" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume3" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2FSantaHat3black20stripe.png?v=1575948243890" draggable="true" ondragstart="drag(event)" width="100" height="auto"> </div>
 
     
-            <div class="designer2" ondrop="drop(event)" ondragover="allowDrop(event)" >
-  <div id="screen">
-    <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" />
-  </div>
-
-      
-</div>
+    <div class="designer2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+        <div id="screen">
+            <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" />
+        </div>
+    </div>
     
     <script>
       

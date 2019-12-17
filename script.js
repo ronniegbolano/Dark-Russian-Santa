@@ -36,6 +36,7 @@ document.getElementById("snap").addEventListener("click", async () => {
     drawBox.draw(canvas);
   });
 
+  //create error messages if there is not exactly one face detected
   if(detections.length > 1){
     alert("Error! There is more than one face detected. Please make sure only one face is detected and try again.");
   }
@@ -57,7 +58,6 @@ document.getElementById("snap").addEventListener("click", async () => {
         110,
         135
     );
-
     var d = rectangleCanvas.toDataURL("/assets/faceRecognitionImage.png");
   }else{
     //write some error your face could not be recognized
