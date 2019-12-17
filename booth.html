@@ -28,6 +28,8 @@
       href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <script src="email.js"></script>
+    <script src="script.js"></script>
+
     <title>Santa Claus is Coming to Town!</title>
 
     <!-- ------------------------- -->
@@ -57,12 +59,27 @@
       <div id="image" class="jumbotron py-4 my-4 text-center">
         <h1 class="display-5">Let's take your photo!</h1>
         <p class="display-6 lead py-2"></p>
-        <!--       <hr class="my-3"> -->
         <p></p>
-        <a id="next" class="btn btn-light btn-lg" href="#" role="button"
-          >Next</a
-        >
+        <div class = "video-area">
+          <video id="video" width="400" height="300" autoplay muted></video>
+        </div>
+        <div class = "button-area">
+          <button id = "snap" class="btn btn-light btn-lg">
+            Snap!
+          </button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class = "camera-area">
+          <canvas id = "canvas" width= "400" height= "300"></canvas>
+        </div>
+        <div class = "camera-area">
+          <canvas id = "rectangleCanvas" width = "400" height = "300"></canvas>
+        </div>
       </div>
+    </div>
+ 
 
       
       
