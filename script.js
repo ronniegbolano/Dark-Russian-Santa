@@ -36,13 +36,14 @@ document.getElementById("snap").addEventListener("click", async () => {
     drawBox.draw(canvas);
   });
 
-  if(detections[0]){
+  if(detections.length > 1){
+    alert("Error! There is more than one face detected. Please make sure only one face is detected and try again.");
+  }
+  else if(detections.length == 1){
     var x = detections[0].detection.box.x;
     var y =  detections[0].detection.box.y;
     var width =  detections[0].detection.box.width;
     var height = detections[0].detection.box.height;
-
-
     //save canvas as an image    
     //draw image based on previous image
     ctx.drawImage(
@@ -60,7 +61,7 @@ document.getElementById("snap").addEventListener("click", async () => {
     var d = rectangleCanvas.toDataURL("/assets/faceRecognitionImage.png");
   }else{
     //write some error your face could not be recognized
-    console.log("your face isn't being recognized!");
+    alert("Error! Your face isn't being recognized! Please try again in better lighting.");
   }
  
 });
