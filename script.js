@@ -58,14 +58,13 @@ document.getElementById("snap").addEventListener("click", async () => {
         width,
         height
     );
-    
     //convert canvas to image
     var imgSrc = rectangleCanvas.toDataURL("image/png");
+
+    //resizing image code
     var image = document.createElement("img");
-    image.width = width; 
-    image.height = height;
     image.src = imgSrc;
-    document.getElementById("faceImage").appendChild(image);
+    $("#droppable2").append(image);
   }else{
     //write some error your face could not be recognized
     alert("Error! Your face isn't being recognized! Please try again in better lighting.");
