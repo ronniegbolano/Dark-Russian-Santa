@@ -61,7 +61,6 @@ document.getElementById("snap").addEventListener("click", async () => {
     
     //convert canvas to image
     var img = rectangleCanvas.toDataURL("image/png");
-    <img src="smiley.gif" alt="Smiley face"/>
     document.body.append('<img src="'+img+'"/>');
   }else{
     //write some error your face could not be recognized
