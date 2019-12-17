@@ -66,7 +66,7 @@ document.getElementById("snap").addEventListener("click", async () => {
     //yo
     //resize image
     image.src = imgSrc;
-    $("#droppable2").append(image);
+    $("#droppable2").html(image);
   }else{
     //write some error your face could not be recognized
     alert("Error! Your face isn't being recognized! Please try again in better lighting.");
