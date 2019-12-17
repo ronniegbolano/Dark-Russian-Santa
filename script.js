@@ -63,7 +63,7 @@ document.getElementById("snap").addEventListener("click", async () => {
     var imgSrc = rectangleCanvas.toDataURL("image/png");
     var image = document.createElement("img");
     image.src = imgSrc;
-    document.body.append(image);
+    document.getElementById("faceImage").appendChild(image);
   }else{
     //write some error your face could not be recognized
     alert("Error! Your face isn't being recognized! Please try again in better lighting.");
