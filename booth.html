@@ -59,58 +59,159 @@
       <!-- Reference for dev purposes only: https://jqueryui.com/droppable/ - Hijol G  --> -      
     </div>
 
-
-    <div class="designer" ondrop="drop(event)" ondragover="allowDrop(event)"> <img id="costume1" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacket500ManJack5.png?v=1575948212201" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume2" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsantajacketwoman450womanjack4.png?v=1575948192958" draggable="true" ondragstart="drag(event)" width="100" height="auto"> <img id="costume3" src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2FSantaHat3black20stripe.png?v=1575948243890" draggable="true" ondragstart="drag(event)" width="100" height="auto"> </div>
-
-    
-    <div class="designer2" ondrop="drop(event)" ondragover="allowDrop(event)" >
-        <div id="screen">
-            <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" />
+    <div class="designer">
+        <div class="divdrag" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket1%20(1).png?v=1576565612264"
+            width="131"
+            height="175"
+          />
         </div>
-    </div>
-    
-    <script>
-      
-      
-      
-     $( "#testdrag" ).draggable();
 
-    $( ".designer" ).draggable();
-  
- 
-    $( ".designer2" ).droppable({
-      
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( ".designer2" )
-            .html( "You just added the santa hat!" );
-      }
-    });
+        <div class="divdrag" style="display:inline-block">
+          <img
+           
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket2%20(1).png?v=1576565611300"
+            width="131"
+            height="175"
+          />
+        </div>
 
-  
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-
-</script>
-    
-    <div id="site_content">
-      <div class="sidebar"></div>
-      <div id="content">
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="divdrag" style="display:inline-block">
+          <img
+           
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fjacket4%20(1).png?v=1576565611395"
+            width="131"
+            height="175"
+          />
+        </div>
       </div>
-    </div>
+      
+      <div class="designer2">
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants1%20(1).png?v=1576565611869"
+            width="108"
+            height="230"
+          />
+        </div>
+
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants2%20(1).png?v=1576565611024"
+            width="108"
+            height="230"
+          />
+        </div>
+
+        <div class="jean" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fpants3%20(1).png?v=1576565611628"
+            width="108"
+            height="230"
+          />
+        </div>
+      </div>
+      
+      <div class="designer3">
+        <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat1%20(1).png?v=1576565610958"
+            width="70"
+            height="auto"
+          />
+        </div>
+
+        <div class="hat" style="display:inline-block">
+          <img
+          
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat2%20(1).png?v=1576565610889"
+            width="70"
+            height="auto"
+          />
+        </div>
+
+        <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat3%20(1).png?v=1576565610763"
+            width="66"
+            height="auto"
+          />
+        </div>
+        
+          <div class="hat" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fhat4%20(1).png?v=1576565610816"
+            width="66"
+            height="auto"
+          />
+        </div>
+        
+          <div class="hat" style="display:inline-block">
+          <img
+          
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsanta-beard-png-transparent-8%20(1).png?v=1576564523789"
+            width="auto"
+            height="70"
+          />
+        </div>
+        
+      
+      </div>
+
+
+      <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+      <!--   ------------------------------ -->
+
+      <div id="droppable2" class="ui-widget-header">
+        <p>Drop here</p>
+        <div id="faceImage">
+          
+        </div>
+        <!--     <img src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fbodyfigure.jpg?v=1576183771133"  class="drag-image" id="testdrag" width="200" height="500" /> -->
+      </div>
+            <div class="designer4">
+
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots3.png?v=1576466673474"
+            width="160"
+            height="78"
+          />
+        </div>
+
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots4.png?v=1576466675693"
+            width="160"
+            height="78"
+          />
+        </div>
+              
+        <div class="boot" style="display:inline-block">
+          <img
+            
+            src="https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2F17bead91-da87-4ad4-af59-b819fd94ae19_boots2.png?v=1576466671284"
+            width="160"
+            height="78"
+          />
+        </div>              
+      </div>
+    
+    
+    
     <div id="footer"></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
