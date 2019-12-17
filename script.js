@@ -62,6 +62,8 @@ document.getElementById("snap").addEventListener("click", async () => {
     //convert canvas to image
     var imgSrc = rectangleCanvas.toDataURL("image/png");
     var image = document.createElement("img");
+    image.width = width; 
+    image.height = height;
     image.src = imgSrc;
     document.getElementById("faceImage").appendChild(image);
   }else{
