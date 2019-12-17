@@ -55,13 +55,15 @@ document.getElementById("snap").addEventListener("click", async () => {
         height,
         0,
         0,
-        width,
-        height
+        56,
+        70
     );
     //convert canvas to image
     var imgSrc = rectangleCanvas.toDataURL("image/png");
     //resizing image code
     var image = document.createElement("img");
+
+    //yo
     //resize image
     image.src = imgSrc;
     document.body.appendChild(image);
