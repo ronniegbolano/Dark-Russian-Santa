@@ -392,3 +392,18 @@ img.figure
   display: block;
 }
 .finbtn:hover {opacity: 1}
+
+#demo{
+  background: linear-gradient(
+    0deg,
+    rgba(26, 30, 36, 1) 0%,
+    rgba(223, 163, 82, 1) 100%
+  );
+  opacity: 0.9;
+}
+
+#demo,
+.display-4 {
+  color:white;
+  font-family: "Berkshire Swash", cursive;
+}
