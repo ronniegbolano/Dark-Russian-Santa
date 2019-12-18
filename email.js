@@ -125,6 +125,12 @@ var reader = new FileReader();
       }
 
 
+      function finalCostume()
+      {
 
+        alert("Thanks for using the costume booth. Enjoy your costume!");
+        document.getElementById("boothback").style.backgroundImage = "url('https://cdn.glitch.com/17bead91-da87-4ad4-af59-b819fd94ae19%2Fsnow.gif?v=1576632031534')";
+  
+      }
 
 //taking the jpeg and attaching it to a buttonfunction allowDrop(ev) {
